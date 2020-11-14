@@ -1,5 +1,5 @@
 # AbstraktrWallpaperUpdater
- A simple Windows (yikes) wallpaper updater that runs in the background and fetches the latest abstraktr.py image every 61 minutes.
+ A simple Windows (yikes!) wallpaper updater that runs in the background and fetches the latest abstraktr.py image every 61 minutes.
 
 ## Windows Defender
 Some people might get an alert that this is a trojan. I'm not a Windows user, so I couldn't say for sure why, but if I had to guess it's because I'm interfacing with the Win32 API. If you don't trust the code, you can always clone the repo and build from source (I used pyinstaller), I think all the manipulations in the code are clear.
