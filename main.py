@@ -7,7 +7,7 @@ from requests import get
 from bs4 import BeautifulSoup
 
 # Globals
-url = "http://deadauthor.org/art/"
+url = "https://deadauthor.org/art/"
 image_path = ""
 PICTURES_FOLDER = shell.SHGetFolderPath(0, shellcon.CSIDL_MYPICTURES, None, 0)
 DIR = r"{}\abstrakt_images".format(PICTURES_FOLDER)
