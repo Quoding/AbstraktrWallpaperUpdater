@@ -5,7 +5,7 @@
 Some people might get an alert that this is a trojan. I'm not a Windows user, so I couldn't say for sure why, but if I had to guess it's because I'm interfacing with the Win32 API. If you don't trust the code, you can always clone the repo and build from source (I used pyinstaller), I think all the manipulations in the code are clear.
 
 ## Startup task
-If you want this code to run at startup, try putting it on the startup list of programs on Windows 10 (CTRL + R: type shell:startup and put the .exe file in there, it should appear when you go on the Startup tab in the task manager)
+If you want this code to run at startup, try putting it on the startup list of programs on Windows 10 (`Win + R`: type `shell:startup` and put the `AbstraktWallpaperUpdater.exe` file from the release in there, it should appear when you go on the Startup tab in the task manager)
 
 ## Pictures folder
 The pictures from abstraktr.py are saved locally in your User's Picture folder on Windows in a folder called `abstrakt_images`.
