@@ -1,3 +1,10 @@
+abstrakt
+.vscode
+
+AbstraktWallPaperUpdater.spec
+AbstraktWallpaperUpdater.spec
+build/
+dist/
 
 abstrakt/Lib/site-packages/__pycache__/easy_install.cpython-37.pyc
 abstrakt/Lib/site-packages/easy_install.py

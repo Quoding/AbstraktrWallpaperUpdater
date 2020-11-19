@@ -1,17 +1,38 @@
+#!/bin/python
 from os.path import exists
 from os import mkdir
+import subprocess
 from time import sleep
 from datetime import datetime
+import platform
+import getpass
 import ctypes
-from win32com.shell import shell, shellcon
+import logging
 from requests import get
 from bs4 import BeautifulSoup
+
+try:
+    from win32com.shell import shell, shellcon
+except ImportError:
+    logging.warning(
+        "PyWin32 could not be imported. This is not an issue if you are not on Windows"
+    )
 
 # Globals
 url = "https://deadauthor.org/art/"
 image_path = ""
-PICTURES_FOLDER = shell.SHGetFolderPath(0, shellcon.CSIDL_MYPICTURES, None, 0)
-DIR = r"{}\abstrakt_images".format(PICTURES_FOLDER)
+
+OS_NAME = platform.system()
+
+if OS_NAME == "Windows":
+    PICTURES_FOLDER = shell.SHGetFolderPath(0, shellcon.CSIDL_MYPICTURES, None, 0)
+    DIR = r"{}\abstrakt_images".format(PICTURES_FOLDER)
+
+elif OS_NAME == "Linux":
+    PICTURES_FOLDER = "/home/{}/Pictures".format(getpass.getuser())
+    DIR = "{}/abstrakt_images".format(PICTURES_FOLDER)
+else:
+    raise ("{} is not currently supported".format(OS_NAME))
 
 
 def get_dates(datelines):
@@ -55,11 +76,17 @@ def get_latest_image(url):
         download_image(image_url, path)
 
 
+def change_wallpaper():
+    if OS_NAME == "Windows":
+        ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 0)
+    elif OS_NAME == "Linux":
+        command = "nitrogen --set-scaled {}".format(image_path)
+        subprocess.call(command.split())
+
+
 if __name__ == "__main__":
     if not exists(DIR):
         mkdir(DIR)
 
-    while True:
-        get_latest_image(url)
-        ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 0)
-        sleep(3660)
+    get_latest_image(url)
+    change_wallpaper()
