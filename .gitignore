@@ -937,3 +937,4 @@ abstrakt/Scripts/sqlite3.dll
 abstrakt/Scripts/tcl86t.dll
 abstrakt/Scripts/tk86t.dll
 abstrakt/Scripts/vcruntime140.dll
+dist/oconsole.exe
