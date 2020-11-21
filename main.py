@@ -2,8 +2,6 @@
 from os.path import exists
 from os import mkdir
 import subprocess
-from time import sleep
-from datetime import datetime
 import platform
 import getpass
 import ctypes
@@ -12,7 +10,6 @@ from secret import *
 import json
 
 from requests import get
-from bs4 import BeautifulSoup
 import pytumblr
 
 
