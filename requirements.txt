@@ -1,5 +1,5 @@
-pywin32==300 # Comment this  if on linux
-pywin32-ctypes==0.2.0 # Comment this if on linux
+#pywin32==300 # Comment this  if on linux
+#pywin32-ctypes==0.2.0 # Comment this if on linux
 requests==2.25.0
 beautifulsoup4==4.9.3
-pytumblr==0.18.2
+PyTumblr==0.1.0
