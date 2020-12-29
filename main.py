@@ -14,8 +14,8 @@ import pytumblr
 
 
 # Globals
-URL = "https://abstraktr.m1q.net"
-BLOG_NAME = "abstraktr.m1q.net"
+URL = "https://abstraktr.8mp.me/"
+BLOG_NAME = "abstraktr.8mp.me"
 image_path = ""
 OS_NAME = platform.system()
 
