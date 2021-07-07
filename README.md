@@ -18,4 +18,4 @@ The pictures from abstraktr.py are saved locally in your User's Picture folder o
 
 ## Disclaimer
 
-This is literally code I wrote in 30 minutes. It might skip on the 60th hour since the release of a new image doesn't seem exactly on time. No guarantees whatsoever, it is definitely ugly/trash code, but it gets the job done. I'm not a dev.
+This is literally code I wrote in 30 minutes. It sucks
